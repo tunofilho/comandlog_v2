@@ -477,7 +477,7 @@
         bounds_group.addLayer(layer_GISSDERODOVIAS_ESTADUAIS_2);
         //map.addLayer(layer_GISSDERODOVIAS_ESTADUAIS_2);
 
-        
+
         function pop_GISSDERODOVIAS_ESTADUAIS_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -2211,6 +2211,95 @@
 
         };
 
+        var ftc_ = L.icon({
+            iconUrl: 'img/1003100221 0000000000 0760000000.svg',
+            iconSize: [38, 95],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+            //shadowUrl: 'my-icon-shadow.png',
+            //shadowSize: [68, 95],
+            //shadowAnchor: [22, 94]
+        });
+
+        var bda8_ = L.icon({
+            iconUrl: 'img/1003100018 1211040000 0760000000.svg',
+            iconSize: [38, 95],
+            iconAnchor: [70, 74],
+            popupAnchor: [-3, -76],
+            //shadowUrl: 'my-icon-shadow.png',
+            //shadowSize: [68, 95],
+            //shadowAnchor: [22, 94]
+        });
+
+        var bda13_ = L.icon({
+            iconUrl: 'img/1003100018 1211040000 0760000000_.svg',
+            iconSize: [38, 95],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+            //shadowUrl: 'my-icon-shadow.png',
+            //shadowSize: [68, 95],
+            //shadowAnchor: [22, 94]
+        });
+
+        var bda18_ = L.icon({
+            iconUrl: 'img/1003100018 1211000500 0760000000.svg',
+            iconSize: [38, 95],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+            //shadowUrl: 'my-icon-shadow.png',
+            //shadowSize: [68, 95],
+            //shadowAnchor: [22, 94]
+        });
+
+        var bda4_ = L.icon({
+            iconUrl: 'img/1003100018 1213000000 0760003072.svg',
+            iconSize: [38, 95],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+            //shadowUrl: 'my-icon-shadow.png',
+            //shadowSize: [68, 95],
+            //shadowAnchor: [22, 94]
+        });
+
+        var ini1_ = L.icon({
+            iconUrl: 'img/1006100016 1211000000 0760000000.svg',
+            iconSize: [38, 95],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+            //shadowUrl: 'my-icon-shadow.png',
+            //shadowSize: [68, 95],
+            //shadowAnchor: [22, 94]
+        });
+
+        var ini2_ = L.icon({
+            iconUrl: 'img/1006100016 1211000000 0760000000_.svg',
+            iconSize: [38, 95],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+            //shadowUrl: 'my-icon-shadow.png',
+            //shadowSize: [68, 95],
+            //shadowAnchor: [22, 94]
+        });
+
+        var ini3_ = L.icon({
+            iconUrl: 'img/1006100016 1211000000 0760000000_2.svg',
+            iconSize: [38, 95],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+            //shadowUrl: 'my-icon-shadow.png',
+            //shadowSize: [68, 95],
+            //shadowAnchor: [22, 94]
+        });
+
+        ftc = L.marker([-20.47619, -54.64878], { icon: ftc_ })//.addTo(map);
+        bda8 = L.marker([-20.47, -54.64], { icon: bda8_ })//.addTo(map);
+        bda13 = L.marker([-15.56, -56.06], { icon: bda13_ })//.addTo(map);
+        bda18 = L.marker([-20.24, -56.38], { icon: bda18_ })//.addTo(map);
+        bda4 = L.marker([-22.22, -54.81], { icon: bda4_ })//.addTo(map);
+        ini1 = L.marker([-16.06, -57.69], { icon: ini1_ })//.addTo(map);
+        ini2 = L.marker([-19.0, -57.65], { icon: ini2_ })//.addTo(map);
+        ini3 = L.marker([-21.69, -57.88], { icon: ini3_ })//.addTo(map);
+
         L.control.layers(baseMaps, {
             '<img src="legend/9GPTLOGArmazm_20.png" /> Armazém_MS': layer_9GPTLOGArmazm_20,
             '<img src="legend/9GPTLOGArmazm_20.png" /> Armazém_MT': layer_9GPTLOGArmazm_21,
@@ -2249,6 +2338,15 @@
             '<img src="legend/GISSDEESTADO_DE_MS_POLITICO_0.png" /> Sedes_Mun_MS': layer_SedesdosMunicpiosAglomeradosRuraiseUrbanos_0,
             '<img src="legend/GISSDEESTADO_DE_MS_POLITICO_0.png" /> MS_POLITICO': layer_GISSDEESTADO_DE_MS_POLITICO_0,
             '<img src="legend/GISSDEESTADO_DE_MS_POLITICO_0.png" /> MT_POLITICO': layer_GISSDEESTADO_DE_MS_POLITICO_1,
+            'FTC': ftc,
+            '8ª Bda Inf Mtz':bda8,
+            '4ª Bda C Mec':bda4,
+            '18ª Bda Inf Pan':bda18,
+            '13ª Bda Inf Mtz':bda13,
+            'Ini_1':ini1,
+            'Ini_2':ini2,
+            'Ini_3':ini3,
+
         }).addTo(map);
 
 
