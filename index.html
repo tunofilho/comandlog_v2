@@ -2169,12 +2169,8 @@
             //})
         }).addTo(map);
 
+
         var url = "https://www.pinms.ms.gov.br/arcgis/rest/services/Imagens/Mosaico_WorldView/ImageServer"
-        //L.esri.ImageMapLayer({
-        //    url: url,
-
-        //}).addTo(map);
-
 
         var esri = L.esri.tiledMapLayer({
             url: url,
@@ -2191,13 +2187,21 @@
         /*var corner1 = L.latLng(-7.23989767, -62.08698149),
             corner2 = L.latLng(-18.16474328, -49.98562622),
             bounds_ = L.latLngBounds(corner1, corner2);*/
-
+        /*
         var sentinel = L.tileLayer.wms("http://geo.sema.mt.gov.br/geoserver/ows?SERVICE=WMS&authkey=541085de-9a2e-454e-bdba-eb3d57a2f492&", {
             layers: 'Mosaicos:SENTINEL_2_2022',
             transparent: true,
             format: 'image/png',
             //bounds:bounds_,
+        })*/
+
+        var sentinel = L.tileLayer.wms("https://geo.sema.mt.gov.br/geoserver/Mosaicos/wms", {
+            layers: 'SENTINEL_2_2023',
+            transparent: true,
+            format: 'image/png',
+            //bounds:bounds_,
         })
+        
 
         var imagens = L.layerGroup([esri, sentinel]);
 
@@ -2207,7 +2211,7 @@
             "wordview_3_2021": esri,
             "cbers_2023": cbers,
             "imagens": imagens,
-            "sentinel_2_2022": sentinel,
+            "sentinel_2_2023": sentinel,
 
         };
 
@@ -2291,11 +2295,23 @@
             //shadowAnchor: [22, 94]
         });
 
+        var balog_ = L.icon({
+            iconUrl: 'img/1003100000 1600009900 0760000288.svg',
+            iconSize: [38, 95],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+            //shadowUrl: 'my-icon-shadow.png',
+            //shadowSize: [68, 95],
+            //shadowAnchor: [22, 94]
+        });
+
         ftc = L.marker([-20.47619, -54.64878], { icon: ftc_ })//.addTo(map);
         bda8 = L.marker([-20.47, -54.64], { icon: bda8_ })//.addTo(map);
         bda13 = L.marker([-15.56, -56.06], { icon: bda13_ })//.addTo(map);
         bda18 = L.marker([-20.24, -56.38], { icon: bda18_ })//.addTo(map);
         bda4 = L.marker([-22.22, -54.81], { icon: bda4_ })//.addTo(map);
+        balog = L.marker([-17.103, -56.944], { icon: balog_ })//.addTo(map);
+
         ini1 = L.marker([-16.06, -57.69], { icon: ini1_ })//.addTo(map);
         ini2 = L.marker([-19.0, -57.65], { icon: ini2_ })//.addTo(map);
         ini3 = L.marker([-21.69, -57.88], { icon: ini3_ })//.addTo(map);
@@ -2343,6 +2359,7 @@
             '4ª Bda C Mec':bda4,
             '18ª Bda Inf Pan':bda18,
             '13ª Bda Inf Mtz':bda13,
+            'Ba Log':balog,
             'Ini_1':ini1,
             'Ini_2':ini2,
             'Ini_3':ini3,
